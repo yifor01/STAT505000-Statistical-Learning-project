@@ -101,7 +101,7 @@ for(i in 100){
   time=ifelse(y$OS.time>=6,"Over","Less")
   gene=data.frame(time,y$Age,as.numeric(y$Sex),as.numeric(y$Stage),as.numeric(y$Post.Surgical.Treatment),as.numeric(y$Histology.type),x[,p2])
   ct=ctree(time~ ., data = gene,subset=train)
-  plot(ct, main = "條件?��論樹")
+  plot(ct, main = "æ¢ä»¶?Ž¨è«–æ¨¹")
   pred.time= predict(ct,newdata=gene[-train,-1])
   table(time[-train],pred.time)
   tree=c(tree,mean(time[-train]==pred.time))
